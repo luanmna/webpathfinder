@@ -16,15 +16,12 @@ class DepthSearchTree extends SearchTree {
 		}
 		$hasInserted = false;
 		if (!empty($nodeList)) {
-			//print_r($nodeList);
 			$newFrontier = $this->getFrontier();
 			foreach($nodeList as $currNode) {
 				$isInFrontier = false;
 				foreach ($newFrontier as $currFrontNode) {
 					// Não deixa adicionar itens repetidos à fronteira
 					if ($currNode == $currFrontNode->getValue()) {
-						//echo "No fronteira atual: "; print_r($currFrontNode->getValue()); echo '<br>';
-						//echo "No atual: "; print_r($currNode); echo '<br>';
 						$isInFrontier = true;
 					}
 				}
